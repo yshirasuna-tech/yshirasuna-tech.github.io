@@ -133,7 +133,6 @@
     grid.setAttribute('aria-label', '写真一覧');
 
     rowPairs.forEach(function (pair) {
-      var usedCaptionCells = new Set();
       pair.entries.forEach(function (entry) {
         var card = document.createElement('article');
         card.className = 'mobile-photo-card';
@@ -143,9 +142,8 @@
         caption.className = 'mobile-photo-caption';
 
         while (entry.photoCell.firstChild) media.appendChild(entry.photoCell.firstChild);
-        if (entry.captionCell && !usedCaptionCells.has(entry.captionCell)) {
-          while (entry.captionCell.firstChild) caption.appendChild(entry.captionCell.firstChild);
-          usedCaptionCells.add(entry.captionCell);
+        if (entry.captionCell) {
+          caption.innerHTML = entry.captionCell.innerHTML;
         }
 
         card.appendChild(media);
