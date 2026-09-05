@@ -61,12 +61,13 @@
       media.className = 'mobile-photo-media';
       var caption = document.createElement('div');
       caption.className = 'mobile-photo-caption';
+      var imageRow = entry.image.closest('tr');
+      var captionRow = Array.from(entry.table.rows).find(function (row) {
+        return row !== imageRow && !row.querySelector('img');
+      });
       var linkedImage = entry.image.closest('a') || entry.image;
       media.appendChild(linkedImage);
 
-      var captionRow = Array.from(entry.table.rows).find(function (row) {
-        return !row.querySelector('img');
-      });
       if (captionRow) {
         Array.from(captionRow.cells).forEach(function (cell) {
           while (cell.firstChild) caption.appendChild(cell.firstChild);
