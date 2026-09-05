@@ -1,0 +1,17 @@
+&font_color=3D461A&//フォントカラー（パロットグリーン）
+&font_size=14&//フォントサイズ
+
+&line_color=669900&//罫線カラー（草色）
+
+&titlle_color=395A1F&タイトルカラー（緑青）
+&titlle_font=Comic Sans MS&フォント種類Comic Sans MS、＿等幅
+
+&frameborder_color=47722E&//枠カラー（サーフグリーン）
+&back_color=98C695&//内側の枠カラー（ミストグリーン）
+
+&scrollborder_color=80CC80&//スクロール、ボタンボーダー、三角色（アーモンドグリーン）
+&scrollbase_color=CCE6BE&//スクロールベース、ボタンベース色（サロー）
+&roll_border_color=788C23&//ロールオーバー時スクロール、ボタンボーダー、三角色
+&roll_base_color=BECC80&//ロールオーバー時スクロール、ボタンベース色
+
+

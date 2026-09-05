@@ -1,0 +1,263 @@
+:root {
+  color-scheme: light;
+}
+
+html {
+  min-height: 100%;
+}
+
+body {
+  min-height: 100%;
+  margin: 0;
+  padding: clamp(16px, 2.5vw, 34px);
+  font-family: "Yu Gothic", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+  line-height: 1.65;
+}
+
+.modern-page-title,
+.modern-section-title {
+  display: block !important;
+  color: #073f73;
+  font-family: "Segoe UI", "Yu Gothic", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  text-shadow: none;
+}
+
+.modern-page-title {
+  width: min(760px, 100%);
+  margin: 0 auto 34px;
+  padding: 12px 20px 13px;
+  border-top: 3px solid #174d7d;
+  border-bottom: 1px solid #91abc1;
+  background: #e1ebf3;
+  font-size: clamp(28px, 3.4vw, 36px);
+  line-height: 1.25;
+}
+
+.modern-page-title + .legacy-title-image + br,
+.modern-page-title + .legacy-title-image + br + br,
+.modern-page-title + .legacy-title-image + br + br + br {
+  display: none;
+}
+
+.modern-section-title {
+  margin: 4px 0 12px;
+  font-size: clamp(23px, 3vw, 30px);
+  line-height: 1.35;
+}
+
+.modern-section-title small {
+  display: inline-block;
+  margin-left: 0.35em;
+  color: #526b7f;
+  font-size: 0.58em;
+  font-weight: 500;
+}
+
+.legacy-title-image {
+  display: none;
+}
+
+a {
+  text-underline-offset: 0.18em;
+}
+
+a:link {
+  color: #064fc1;
+}
+
+a:visited {
+  color: #7b2c91;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.legacy-home-return-area {
+  margin: 32px 0 12px;
+  text-align: center;
+}
+
+.legacy-home-return {
+  display: inline-block;
+  padding: 8px 14px;
+  border: 1px solid #7798b3;
+  background: #f5f9fc;
+  color: #064b83;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.legacy-home-return:hover,
+.legacy-home-return:focus-visible {
+  background: #e3eef6;
+  text-decoration: underline;
+}
+
+table {
+  max-width: 100%;
+  margin-inline: auto;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+iframe[src*="youtube.com/embed/"] {
+  display: block;
+  width: min(480px, 92%);
+  aspect-ratio: 16 / 9;
+  height: auto;
+  margin: 14px auto 24px;
+  border: 0;
+  background: #111;
+}
+
+img[src^="http://visit.geocities.jp/"] {
+  display: none;
+}
+
+.lightbox-trigger {
+  display: block;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: zoom-in;
+}
+
+.lightbox-trigger img {
+  display: block;
+  border: 0 !important;
+}
+
+.lightbox-trigger:focus-visible {
+  outline: 3px solid #0a5795;
+  outline-offset: 3px;
+}
+
+.image-lightbox {
+  width: min(96vw, 1200px);
+  max-width: none;
+  max-height: 92vh;
+  padding: 46px 18px 16px;
+  border: 1px solid #8ca4b7;
+  background: #f8fbfd;
+  color: #17334c;
+}
+
+.image-lightbox::backdrop {
+  background: rgba(7, 18, 28, 0.82);
+}
+
+.image-lightbox img {
+  display: block;
+  max-width: 100%;
+  max-height: calc(92vh - 90px);
+  margin: auto;
+  object-fit: contain;
+}
+
+.image-lightbox p {
+  margin: 8px 0 0;
+  text-align: center;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  width: 34px;
+  height: 34px;
+  border: 1px solid #7790a4;
+  border-radius: 50%;
+  background: #fff;
+  color: #17334c;
+  font-size: 24px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+@media (max-width: 680px) {
+  body {
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  blockquote {
+    margin-inline: 0;
+  }
+
+  table,
+  tbody,
+  tr,
+  td {
+    max-width: 100%;
+  }
+}
+
+.mobile-legacy body {
+  padding: 12px;
+  font-size: 14px;
+}
+
+.mobile-legacy blockquote {
+  margin-inline: 0;
+}
+
+.mobile-legacy table,
+.mobile-legacy tbody,
+.mobile-legacy tr,
+.mobile-legacy td {
+  max-width: 100%;
+}
+
+.mobile-photo-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  width: 100%;
+  margin: 14px auto 24px;
+}
+
+.mobile-photo-card {
+  min-width: 0;
+  padding: 8px;
+  border: 1px solid #aeb8c0;
+  background: #fff;
+  box-sizing: border-box;
+}
+
+.mobile-photo-media {
+  display: grid;
+  min-height: 88px;
+  margin-bottom: 8px;
+  place-items: center;
+}
+
+.mobile-photo-media a {
+  display: block;
+  width: 100%;
+}
+
+.mobile-photo-media img {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: 180px;
+  margin: auto;
+  border: 0 !important;
+  object-fit: contain;
+}
+
+.mobile-photo-caption {
+  min-width: 0;
+  font-size: 13px;
+  line-height: 1.55;
+  overflow-wrap: anywhere;
+  text-align: left;
+}

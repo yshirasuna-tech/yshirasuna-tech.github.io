@@ -1,0 +1,62 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+<HEAD>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="GENERATOR" content="JustSystems Homepage Builder Version 16.0.1.0 for Windows">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<TITLE></TITLE>
+<script defer src="/legacy/legacy-mobile.js?v=19"></script>
+</HEAD>
+<BODY bgcolor="#CCCCCC">
+<CENTER>
+<BLOCKQUOTE>
+<TABLE cellpadding="0" cellspacing="0">
+  <TBODY>
+    <TR>
+      <TD><a class="lightbox-trigger" href="photos/koishikawa.jpg" data-full-image="photos/koishikawa.jpg" data-caption="入学式"><IMG decoding="async" src="photos/koishikawa_thumb.jpg" width="512" height="368" border="0" alt="入学式の写真。クリックで拡大"></a></TD>
+    </TR>
+    <TR>
+      <TD align="center" bgcolor="#ffffff">１９６３年（昭和３３年）４月７日　入学式</TD>
+    </TR>
+    <TR>
+      <TD><a class="lightbox-trigger" href="photos/graduation1.jpg" data-full-image="photos/graduation1.jpg" data-caption="卒業式"><IMG loading="lazy" decoding="async" src="photos/graduation1_thumb.jpg" width="503" height="375" border="0" alt="卒業式の写真。クリックで拡大"></a></TD>
+    </TR>
+    <TR>
+      <TD align="center" bgcolor="#ffffff">１９６６年（昭和３６年）３月　卒業式</TD>
+    </TR>
+  </TBODY>
+</TABLE>
+</BLOCKQUOTE>
+</CENTER>
+<dialog class="image-lightbox" id="image-lightbox">
+  <button class="lightbox-close" type="button" aria-label="拡大画像を閉じる">×</button>
+  <img loading="lazy" decoding="async" id="lightbox-image" src="" alt="">
+  <p id="lightbox-caption"></p>
+</dialog>
+<script>
+(function () {
+  var lightbox = document.getElementById('image-lightbox');
+  var lightboxImage = document.getElementById('lightbox-image');
+  var lightboxCaption = document.getElementById('lightbox-caption');
+
+  document.querySelectorAll('.lightbox-trigger').forEach(function (trigger) {
+    trigger.addEventListener('click', function (event) {
+      event.preventDefault();
+      lightboxImage.src = trigger.getAttribute('data-full-image');
+      lightboxImage.alt = trigger.getAttribute('data-caption');
+      lightboxCaption.textContent = trigger.getAttribute('data-caption');
+      lightbox.showModal();
+    });
+  });
+
+  document.querySelector('.lightbox-close').addEventListener('click', function () {
+    lightbox.close();
+  });
+
+  lightbox.addEventListener('click', function (event) {
+    if (event.target === lightbox) lightbox.close();
+  });
+}());
+</script>
+</BODY>
+</HTML>
